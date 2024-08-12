@@ -27,7 +27,7 @@ export function ImagesSliderDemo() {
         }}
         className="z-50 flex flex-col justify-center items-center"
       >
-        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 pt-4">
+        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-green-400 pt-4">
         <TypeAnimation
       sequence={[
         'Think 100 times before you take a decision, But once that decision is taken, stand by it as one man',
