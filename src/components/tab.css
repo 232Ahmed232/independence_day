@@ -1,0 +1,116 @@
+.tabs-container {
+    max-width: 1250px;
+    width: 100%;
+    perspective: 1000px;
+    margin: auto; 
+    padding: 0 15px; 
+    text-align: center;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Make width responsive */
+    background-color: #dadada;
+    padding: 10px 20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #008001;
+    border-right: 1px solid #008001;
+    color: #008001;
+    background-color: #0080000f ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  
+  .tab:hover {
+    color: white;
+  }
+  
+  .tab.active {
+    background-color: #008001;
+    color: white;
+  }
+  
+  .tab-content-container {
+    position: relative;
+    height: auto; /* Adjust height to fit content */
+    min-height: 300px; /* Ensure minimum height */
+  }
+  
+  .tab-content {
+    position: relative; /* Change from absolute to relative */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+    box-shadow: 2px 3px 7px #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    display: none;
+    transform-origin: top;
+    transform: scale(1); /* Keep scale as 1 to avoid distortion */
+    opacity: 1; /* Ensure opacity remains visible */
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .content {
+    height: auto; /* Adjust height to fit content */
+    width: 100%; /* Ensure full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Stack items vertically on smaller screens */
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+  
+  .content p {
+    color: #008001;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dummy-image {
+    width: 600px; 
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .tabs {
+      flex-direction: column; /* Stack tabs vertically */
+      align-items: stretch; /* Ensure tabs take full width */
+    }
+  
+    .tab {
+      width: 100%; /* Make tabs full width */
+      text-align: center; /* Center-align text */
+    }
+  
+    .content {
+      flex-direction: column; /* Stack content vertically */
+      gap: 20px; /* Increase gap for better spacing */
+    };
+  
+    .tab-content {
+      padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+}
+  
