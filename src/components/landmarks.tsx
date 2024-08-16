@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import "./tab.css"
 function Landmarks() {
-  const [activeTab, setActiveTab] = useState('Introduction');
+  const [activeTab, setActiveTab] = useState('K2');
 
   const handleTabClick = (target:any) => {
     setActiveTab(target);
@@ -32,7 +32,7 @@ function Landmarks() {
 
   return (
     <div>
-      <h1 className='text-center my-8 text-green-800 font-bold text-xl lg:text-3xl'>Landmarks & Festivals</h1>
+      <h1 className='text-center my-12 text-green-800 font-bold text-xl lg:text-3xl'>Landmarks & Festivals</h1>
       <div className="tabs-container">
         <div className="tabs">
           {tabs.map((tab) => (

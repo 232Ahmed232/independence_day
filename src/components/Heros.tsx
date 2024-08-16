@@ -37,15 +37,16 @@ function Heros() {
   return (
     <div>
       <h1 className='text-center my-8  text-green-800 font-bold  text-xl lg:text-3xl'>Heroes That Make Us Proud</h1>
-      <div className="h-[25rem] w-full flex flex-wrap gap-y-6 items-center  justify-center ">
+      <div className=" w-full block flex flex-wrap gap-6 items-center   justify-center ">
         {heroes.map(ele => {
           return (
             
               <PinContainer
               key={ele.achieve}
               title={ele.description}
+              className=""
               >
-                <div className="flex  basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] bg-gradient-to-r from-green-500 to-green-800 ">
+                <div className="flex   basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] bg-gradient-to-r from-green-500 to-green-800 ">
                   <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
                     {ele.name}
                   </h3>
